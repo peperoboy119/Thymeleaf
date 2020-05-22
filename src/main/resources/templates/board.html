@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 게시판 이제 만들면 된다 -->
+
+	<!-- 리스트를 출력하는데 -->
+	<table border="1">
+
+		<tr>
+			<th>번호</th>
+			<th>글제목</th>
+			<th>작성자</th>
+			<th>작성일</th>
+		</tr>
+
+		<tr th:each="board : ${boardlist}">
+			<td th:text="${board.number}"></td>
+			<td th:text="${board.id}"></td>
+			<td th:text="${board.title}"></td>
+			<td th:text="${board.date}"></td>
+		</tr>
+
+
+
+
+
+
+	</table>
+
+</body>
+</html>
